@@ -1,0 +1,1 @@
+There won't be any document with duplicated IDs. MongoDB's document ID is the unique identifier for each document, like a primary key in relational database. It is used to retrieve a specific document so the implications is that it must be unique.

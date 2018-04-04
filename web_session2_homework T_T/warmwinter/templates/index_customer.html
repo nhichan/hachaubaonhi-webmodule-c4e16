@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Database Intro</title>
+  </head>
+  <body>
+    <h1>Customers</h1>
+
+{% for customer in all_customers %}
+
+    {% if customer.gender == 0 %}
+    <img src="../static/image/female.jpg" alt="ảnh">
+    {% else %}
+    <img src="../static/image/male.jpg" alt="ảnh">
+    {% endif %}
+
+
+    <p>Name:{{customer.name}}</p>
+    <p>Gender:{{customer.gender}}</p>
+    <p>Email:{{customer.email}}</p>
+    <p>Phone number:{{customer.phone}}</p>
+    <p>Job:{{customer.job}}</p>
+    <p>Company:{{customer.company}}</p>
+    <p>Contacted:{{customer.contacted}}</p>
+    {% endfor %}
+  </body>
+</html>
