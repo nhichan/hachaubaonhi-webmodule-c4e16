@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Database Intro</title>
+  </head>
+  <body>
+    <h1>Search</h1>
+
+{% for service in all_services %}
+
+    {% if service.gender == 0 %}
+    <img src="../static/image/female.jpg" alt="ảnh">
+    {% else %}
+    <img src="../static/image/male.jpg" alt="ảnh">
+    {% endif %}
+
+
+    <p>{{service.name}}</p>
+    <p>{{service.yob}}</p>
+    <p>{{service.height}}</p>
+    <p><a href="{{url_for('detail',service_id = service.id)}}">Nhấn vào em đi</a></p>
+    {% endfor %}
+  </body>
+</html>
