@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>mùa đông không lạnh</title>
+  </head>
+  <body>
+    <h1>thêm nhân viên mới</h1>
+    <form action="/new_service" method="post"> <!--method of request, including option, put, patch, delete-->
+      <label>name</label>
+      <input type = "text" name ="name" value="">
+
+      <label>yob</label>
+      <input type = "text" name ="yob" value="">
+
+      <label>address</label>
+      <input type = "text" name ="address" value="">
+
+      <p>
+        <label>gender</label><br>
+        <input type="radio" name="gender" value="1">Male<br>
+        <input type="radio" name="gender" value="0">Female
+      </p>
+
+      <input type = "submit">
+    </form>
+  </body>
+</html>
