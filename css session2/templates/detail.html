@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% include "meta-data.html" %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="offset-lg-4 col-lg-4 col-sm-6 col-12 main-section text-center border-primary">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-12 profile-header"></div>
+            </div>
+            <div class="row user-detail">
+                <div class="col-lg-12 col-sm-12 col-12">
+                  <img src="{{service.image}}"class="rounded-circle img-thumbnail">
+                    <h2>{{service.name}}</h2>
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{service.address}}</p>
+                    <p><i class="fas fa-mobile-alt"></i> {{service.phone}}</p>
+                    <hr>
+                    <span>
+                      <p><b>Năm sinh: </b>{{service.yob}}</p>
+                      <p><b>Cao: </b>{{service.height}}</p>
+                      <p><b>Mô tả: </b>{{service.description}}</p>
+                      <p><b>Số đo 3 vòng: </b>{{service.measurements[0]}} - {{service.measurements[1]}} - {{service.measurements[2]}}</p>
+                    </span>
+
+                    <hr>
+                    <a href = "{{url_for('send_request', requested=service.id)}}" class="btn btn-success btn-sm">Yêu cầu dịch vụ</a>
+                    <a href="#" class="btn btn-info btn-sm">Send Messege</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
